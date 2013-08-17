@@ -4,8 +4,18 @@ body{
     font-size:80%;
     line-height:1.5em;
     overflow-y: scroll;
+    margin: 0px;
+    padding: 0px;
 }
-h1.bandeau{
+a, strong,h1,h2,h3{
+    color:#900000;
+}
+h1,h2,h3{
+    font-family: Arial, Sans-Serif;
+    font-weight: normal;
+}
+/** header */
+#header h1.bandeau{
     background-image: url(./img/labs-topheman-bandeau.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -18,20 +28,169 @@ h1.bandeau{
     font-style: italic;
     font-weight: bold;
 }
-a, strong,h1,h2,h3{
-    color:#900000;
-}
-h1,h2,h3{
-    font-family: "Comic Sans MS", Tahoma, Arial, Sans-Serif;
-    font-weight: normal;
-}
-dt:before{
-    content: '• ';
-}
-dt{
-    padding-left:20px;
-}
-dd{
-    margin-left: 0px;
+#header ul{
+    list-style: none;
     text-align: center;
+    padding:0px 0px 10px 0px;
+}
+#header ul li{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+#header ul li a{
+    display: block;
+    width:150px;
+    height:37px;
+    text-decoration: none;
+    padding-top:0px;
+    -webkit-transition : all 0.5s;
+    -moz-transition : all 0.5s;
+    -ms-transition : all 0.5s;
+    -o-transition : all 0.5s;
+    transition : all 0.5s;
+}
+#header ul li a span.icon{
+    position: absolute;
+    display: block;
+    width:32px;
+    height: 32px;
+    top:2px;
+    left:75px;
+    -webkit-transition : all 0.5s;
+    -moz-transition : all 0.5s;
+    -ms-transition : all 0.5s;
+    -o-transition : all 0.5s;
+    transition : all 0.5s;
+}
+#header ul li a span.desc{
+    position: absolute;
+    display: block;
+    width:32px;
+    height: 32px;
+    top:7px;
+    right:100px;
+    opacity : 0;
+    -webkit-transition : all 0.5s;
+    -moz-transition : all 0.5s;
+    -ms-transition : all 0.5s;
+    -o-transition : all 0.5s;
+    transition : all 0.5s;
+}
+#header ul li a:hover{
+    
+}
+#header ul li a:hover span.icon{
+    left:0px;
+    -webkit-transform: rotate(360deg);  
+    -moz-transform: rotate(360deg);  
+    -ms-transform: rotate(360deg);  
+    -o-transform: rotate(360deg);  
+    transform: rotate(360deg);  
+}
+#header ul li a:hover span.desc{
+    left:50px;
+    opacity : 100;
+}
+#header ul li.twitter a span.icon{
+    background-image: url(img/twitter.png);
+}
+#header ul li.github a span.icon{
+    background-image: url(img/github.png);
+}
+#header ul li.blog a span.icon{
+    background-image: url(img/blog.png);
+}
+/** content */
+#main {
+    padding : 5px 10px 5px 5px;
+}
+#main h1{
+    text-align:center;
+}
+.projects{
+    display: block;
+    width: 800px;
+    border:1px #900000 solid;
+    border-radius: 8px;
+    margin : 0 auto 10px;
+    padding: 5px;
+    background-color : white;
+}
+.projects .wrapper{
+    display: block;
+    width: auto;
+}
+.projects .caption{
+    float:right;
+    margin-left:5px;
+    border: 0px;
+}
+.projects .project-title {
+    
+}
+.projects .tags{
+    float:right;
+    font-style: italic;
+}
+.projects .tags span:before{
+    content:'[';
+}
+.projects .tags span:after{
+    content:']';
+}
+.projects ul{
+    list-style: none;
+    text-align: center;
+    padding:0px 0px 10px 0px;
+}
+.projects ul li{
+    display: inline-block;
+    margin : auto 30px;
+}
+ul.utilities{
+    list-style: none;
+    padding:0px 0px 10px 0px;
+}
+ul.utilities li{
+    text-align: center;
+    margin-bottom: 17px;
+}
+/** footer */
+#footer{
+    text-align: center;
+    font-size: 10px;
+    color:#62686A;
+}
+#footer a{
+    color:#62686A;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media screen and (max-width: 700px){
+    #header h1.bandeau{
+        background-image: url(./img/labs-topheman-bandeau.min.png);
+        height:42px;
+    }
+    #header ul li a{
+        width:37px;
+        height:37px;
+    }
+    #header ul li a span.icon{
+        left:0px;
+    }
+    #header ul li a span.desc{
+        display: none;
+    }
+    .projects ul li{
+        margin : auto 5px;
+    }
+}
+@media screen and (max-width: 820px){
+    .projects{
+        width: 98%;
+    }
+}
+/* Desktops (portrait and landscape) ----------- */
+@media screen and (min-width: 721px){
+    
 }
