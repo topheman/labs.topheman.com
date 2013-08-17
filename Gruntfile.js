@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         // grunt-contrib-connect will serve the files of the project
         // on specified port and hostname
         connect: {
-            debug: {
+            all: {
                 options: {
                     port: 9000,
                     hostname: "0.0.0.0",
@@ -31,25 +31,31 @@ module.exports = function(grunt) {
         
         // grunt-open will open your browser at the project's URL
         open: {
-            debug: {
-                path: 'http://localhost:<%= connect.debug.options.port%>/index.html'
+            dev: {
+                path: 'http://localhost:<%= connect.all.options.port%>/index.dev.html'
+            },
+            release: {
+                path: 'http://localhost:<%= connect.all.options.port%>/index.html'
             }
         },
-        
-        //copy into release folder the release.html files + adds buildNumber in title tag via templating, at the end of the build
-        processhtml: {
-            options: {
-                process: true,
-                data: {
-                    "buildNumber": (new Date()).getTime(),
-                    "version": version
+
+        ejs_static: {
+            dev: {
+                options: {
+                    dest: '',
+                    path_to_data: 'templating/data/index.dev.json',
+                    parent_dirs: false,
+                    underscores_to_dashes: true,
+                    file_extension: '.html'
                 }
             },
-            dist: {
-                files: {
-                    'release/index.html': ['src/index.html'],
-                    'release/game.html': ['src/game.release.html'],
-                    'release/offline.html': ['src/offline.html']
+            release: {
+                options: {
+                    dest: '',
+                    path_to_data: 'templating/data/index.json',
+                    parent_dirs: false,
+                    underscores_to_dashes: true,
+                    file_extension: '.html'
                 }
             }
         }
@@ -72,8 +78,11 @@ module.exports = function(grunt) {
         grunt.registerTask('deploy', ['ftp-deploy:release']);
     }
 
-    grunt.registerTask('server', ['open:debug', 'connect:debug']);
-    grunt.registerTask('server-debug', ['open:debug', 'connect:debug']);
-    grunt.registerTask('server-release', ['open:release', 'connect:release']);
+    grunt.registerTask('server', ['ejs_static:dev','open:dev', 'connect']);
+    grunt.registerTask('server-dev', ['ejs_static:dev','open:dev', 'connect']);
+    grunt.registerTask('server-release', ['ejs_static:release','open:release', 'connect']);
+    
+    grunt.registerTask('build-dev', ['ejs_static:dev']);
+    grunt.registerTask('build-release', ['ejs_static:release']);
 
 };

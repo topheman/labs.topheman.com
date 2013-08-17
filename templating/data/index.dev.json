@@ -1,0 +1,9 @@
+{
+    "index.dev": {
+        "path_to_layout": "templating/layouts/index.ejs",
+        "path_to_data": [
+            "templating/data/livereload.json",
+            {"templating/data/data.json": "index"}
+        ]
+    }
+}
