@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 options: {
                     port: 9000,
                     hostname: "0.0.0.0",
-                    keepalive: true,
+                    keepalive: false,//must be at false for livereload
                     base: ""
                 }
             }
@@ -58,6 +58,24 @@ module.exports = function(grunt) {
                     file_extension: '.html'
                 }
             }
+        },
+        
+        watch : {
+            options:{
+                livereload : true
+            },
+            //when the tpl or data changes, rebuild the html and trigger a reload (livereload only on dev)
+            "dev-tpl": {
+                files : [
+                    'templating/data/*.json',
+                    'templating/layouts/*.ejs'
+                ],
+                tasks : ['build-dev']
+            },
+            //when a css is changed, only trigger a reload
+            "dev-css" : {
+                files : ['css/*.css']
+            }
         }
         
     });
@@ -78,9 +96,9 @@ module.exports = function(grunt) {
         grunt.registerTask('deploy', ['ftp-deploy:release']);
     }
 
-    grunt.registerTask('server', ['ejs_static:dev','open:dev', 'connect']);
-    grunt.registerTask('server-dev', ['ejs_static:dev','open:dev', 'connect']);
-    grunt.registerTask('server-release', ['ejs_static:release','open:release', 'connect']);
+    grunt.registerTask('server', ['ejs_static:dev','open:dev', 'connect','watch']);
+    grunt.registerTask('server-dev', ['ejs_static:dev','open:dev', 'connect','watch']);
+    grunt.registerTask('server-release', ['ejs_static:release','open:release', 'connect','watch']);
     
     grunt.registerTask('build-dev', ['ejs_static:dev']);
     grunt.registerTask('build-release', ['ejs_static:release']);

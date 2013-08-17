@@ -3,9 +3,11 @@
     <head>
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <% if (typeof livereload !== "undefined") { %><meta name="livereload"><% } %>
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <% if (typeof livereload !== "undefined") { %><script src="http://localhost:35729/livereload.js"></script><% } %>
     </head>
     <body>
+        <p>toto</p>
         <ul>
         <% for(var i=0; i<data.projects.length; i++) {%>
             <li><%= data.projects[i].title %></li>
