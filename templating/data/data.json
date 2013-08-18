@@ -2,17 +2,216 @@
     "index" : {
         "projects" : [
             {
-                "title" : "boxboxevents"
+                "title" : "boxboxevents",
+                "tags" : [
+                    "GAME ENGINE"
+                ],
+                "caption" : {
+                    "img" : "captions/boxboxevents.png",
+                    "link" : "http://topheman.github.io/boxbox",
+                    "title" : "boxboxevents on github"
+                },
+                "description" : "A framework that makes it easier to use the Box2d / Box2dweb physics engine in JavaScript, with mouse and multitouch events support.",
+                "links" : [
+                    {
+                        "label" : "demo",
+                        "href" : "http://topheman.github.io/boxbox",
+                        "title" : "All about boxboxevents"
+                    },
+                    {
+                        "label" : "github",
+                        "href" : "https://github.com/topheman/boxbox",
+                        "title" : "boxboxevents on github"
+                    },
+                    {
+                        "label" : "blog post",
+                        "href" : "http://blog.topheman.com/2013/06/03/boxboxevents-moteur-physique-javascript-jeux-videos/",
+                        "title" : "About boxboxevents on my blog"
+                    }
+                ]
             },
             {
-                "title" : "tototo"
+                "title" : "Ball.js",
+                "tags" : [
+                    "GAME ENGINE"
+                ],
+                "caption" : {
+                    "img" : "captions/Ball.png",
+                    "link" : "http://labs.topheman.com/Ball/",
+                    "title" : "Ball.js demo"
+                },
+                "description" : "A lightweight engine that handles physics interactions between balls as well as rendering.",
+                "links" : [
+                    {
+                        "label" : "demo",
+                        "href" : "http://labs.topheman.com/Ball/",
+                        "title" : "Test Ball.js"
+                    },
+                    {
+                        "label" : "github",
+                        "href" : "https://github.com/topheman/Ball.js",
+                        "title" : "Ball.js on github"
+                    },
+                    {
+                        "label" : "blog post",
+                        "href" : "http://blog.topheman.com/2012/04/01/topheman-bombs-html5-javascript-android-game/#more-1208",
+                        "title" : "About Ball.js on my blog"
+                    }
+                ]
+            },
+            {
+                "title" : "Topheman Bombs (v2)",
+                "tags" : [
+                    "GAME"
+                ],
+                "caption" : {
+                    "img" : "captions/bombs.png",
+                    "link" : "http://bombs.topheman.com/",
+                    "title" : "Play Topheman Bombs"
+                },
+                "description" : "HTML5 / Javascript game that takes advantage of the canvas element and the accelerometer (devicemotion/deviceorientation events) on your device. Play offline on your mobile as well as on your desktop with an accelerometer emulator",
+                "links" : [
+                    {
+                        "label" : "play",
+                        "href" : "http://bombs.topheman.com/",
+                        "title" : "Play Topheman Bombs"
+                    },
+                    {
+                        "label" : "github",
+                        "href" : "https://github.com/topheman/bombs",
+                        "title" : "Topheman Bombs on github"
+                    },
+                    {
+                        "label" : "blog post (v1)",
+                        "href" : "http://blog.topheman.com/2012/04/01/topheman-bombs-html5-javascript-android-game/",
+                        "title" : "About Topheman Bombs on my blog"
+                    }
+                ]
+            },
+            {
+                "title" : "Topheman Squares",
+                "tags" : [
+                    "GAME"
+                ],
+                "caption" : {
+                    "img" : "captions/squares.png",
+                    "link" : "http://squares.topheman.com/",
+                    "title" : "Play Topheman Squares"
+                },
+                "description" : "An adaptation in HTML5/Javascript - based on the memories I have, of a game I used to play in the 90s.",
+                "links" : [
+                    {
+                        "label" : "play",
+                        "href" : "http://squares.topheman.com/",
+                        "title" : "Play Topheman Squares"
+                    },
+                    {
+                        "label" : "github",
+                        "href" : "https://github.com/topheman/squares",
+                        "title" : "Topheman Squares on github"
+                    },
+                    {
+                        "label" : "blog post",
+                        "href" : "http://blog.topheman.com/2012/02/05/topheman-squares-html5-javascript-game/",
+                        "title" : "About Topheman Squares on my blog"
+                    }
+                ]
             }
         ],
         "experiments" : [
-    
+            {
+                "title" : "Smiley Faces",
+                "tags" : [
+                    "DEMO GAME"
+                ],
+                "caption" : {
+                    "img" : "captions/smileyFaces.png",
+                    "link" : "http://topheman.github.io/boxbox/boxbox/demos/topheman/smileyFaces/demo.html?debug=false",
+                    "title" : "Play Smiley Faces"
+                },
+                "description" : "A little demo game to show the possibilities of my game engine boxboxevents.",
+                "links" : [
+                    {
+                        "label" : "play",
+                        "href" : "http://topheman.github.io/boxbox/boxbox/demos/topheman/smileyFaces/demo.html?debug=false",
+                        "title" : "Play Smiley Faces"
+                    },
+                    {
+                        "label" : "github",
+                        "href" : "https://github.com/topheman/boxbox/tree/master/demos/topheman/smileyFaces",
+                        "title" : "Smiley Faces on github (boxboxevents repository - demos part)"
+                    }
+                ]
+            },
+            {
+                "title" : "Threejs-cone",
+                "tags" : [
+                    "THREEJS"
+                ],
+                "caption" : {
+                    "img" : "captions/threejs.png",
+                    "link" : "http://labs.topheman.com/threejs/",
+                    "title" : "Test Threejs-cone"
+                },
+                "description" : "A little test on threejs with the boilerplate for Threejs ...",
+                "links" : [
+                    {
+                        "label" : "test",
+                        "href" : "http://labs.topheman.com/threejs/",
+                        "title" : "Test Threejs-cone"
+                    },
+                    {
+                        "label" : "github",
+                        "href" : "https://github.com/topheman/threejs-cone",
+                        "title" : "Threejs-cone on github"
+                    }
+                ]
+            }
         ],
         "utilities" : [
-    
+            {
+                "title" : "SoftLogger",
+                "description" : "Simple canvas logger linked to the console.log",
+                "links" : [
+                    {
+                        "label" : "demo (with smileyFaces)",
+                        "href" : "http://topheman.github.io/boxbox/boxbox/demos/topheman/smileyFaces/demo.html",
+                        "title" : "demo of SoftLogger with smileyFaces"
+                    },
+                    {
+                        "label" : "github",
+                        "href" : "https://github.com/topheman/SoftLogger/",
+                        "title" : "SoftLogger on github"
+                    }
+                ]
+            },
+            {
+                "title" : "HighScoresManager.js",
+                "description" : "Simple high scores manager with localStorage",
+                "links" : [
+                    {
+                        "label" : "github",
+                        "href" : "https://github.com/topheman/HighScoresManager.js",
+                        "title" : "HighScoresManager.js on github"
+                    }
+                ]
+            },
+            {
+                "title" : "Array.foreachLoopBack.js",
+                "description" : "Loop from any index to any other in your array, looping back at the end of it without bothering about indexes",
+                "links" : [
+                    {
+                        "label" : "demo",
+                        "href" : "http://labs.topheman.com/Array.foreachLoopBack/Array.foreachLoopBack.demo.html",
+                        "title" : "demo of Array.foreachLoopBack.js"
+                    },
+                    {
+                        "label" : "github",
+                        "href" : "https://github.com/topheman/Array.foreachLoopBack.js",
+                        "title" : "Array.foreachLoopBack.js on github"
+                    }
+                ]
+            }
         ]
     }
 }

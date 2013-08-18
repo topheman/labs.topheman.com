@@ -110,7 +110,7 @@ h1,h2,h3{
 }
 .projects{
     display: block;
-    width: 800px;
+    max-width: 800px;
     border:1px #900000 solid;
     border-radius: 8px;
     margin : 0 auto 10px;
@@ -142,7 +142,7 @@ h1,h2,h3{
 .projects ul{
     list-style: none;
     text-align: center;
-    padding:0px 0px 10px 0px;
+    padding:0px;
 }
 .projects ul li{
     display: inline-block;
@@ -151,6 +151,8 @@ h1,h2,h3{
 ul.utilities{
     list-style: none;
     padding:0px 0px 10px 0px;
+    max-width : 800px;
+    margin : 0px auto;
 }
 ul.utilities li{
     text-align: center;
@@ -170,6 +172,7 @@ ul.utilities li{
     #header h1.bandeau{
         background-image: url(./img/labs-topheman-bandeau.min.png);
         height:42px;
+        margin:0px;
     }
     #header ul li a{
         width:37px;
@@ -185,12 +188,12 @@ ul.utilities li{
         margin : auto 5px;
     }
 }
-@media screen and (max-width: 820px){
-    .projects{
-        width: 98%;
-    }
-}
-/* Desktops (portrait and landscape) ----------- */
-@media screen and (min-width: 721px){
-    
+/** responsive github ribbon from http://codepo8.github.io/css-fork-on-github-ribbon/ */
+#forkongithub a{background:#000;color:#fff;text-decoration:none;font-family:arial, sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}
+#forkongithub a:hover{background:#900000;color:#fff;}
+#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}
+#forkongithub a::after{bottom:1px;top:auto;}
+@media screen and (min-width:700px){
+    #forkongithub{position:absolute;display:block;top:0;right:0;width:160px;overflow:hidden;height:150px;}
+    #forkongithub a{width:150px;position:absolute;top:35px;right:-62px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);white-space:nowrap;}
 }

@@ -68,7 +68,7 @@ module.exports = function(grunt) {
             "dev-tpl": {
                 files : [
                     'templating/data/*.json',
-                    'templating/layouts/*.ejs'
+                    'templating/layouts/**/*.ejs'
                 ],
                 tasks : ['build-dev']
             },

@@ -1,17 +1,72 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
     <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Topheman Labs</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
         <link rel="stylesheet" type="text/css" href="./css/style.css" />
         <% if (typeof livereload !== "undefined") { %><script src="http://localhost:35729/livereload.js"></script><% } %>
     </head>
     <body>
-        <p>toto</p>
-        <ul>
-        <% for(var i=0; i<data.projects.length; i++) {%>
-            <li><%= data.projects[i].title %></li>
-         <% } %>
-        </ul>
+        <span id="forkongithub"><a href="https://github.com/topheman/labs.topheman.com">Fork me on GitHub</a></span>
+        <header id="header">
+            <h1 class="bandeau">Welcome to Topheman Labs</h1>
+            <ul>
+                <li class="twitter"><a href="https://twitter.com/topheman" title="@topheman on twitter"><span class="icon"></span><span class="desc">Twitter</span></a></li>
+                <li class="github"><a href="https://github.com/topheman" title="@topheman on github"><span class="icon"></span><span class="desc">Github</span></a></li>
+                <li class="blog"><a href="http://blog.topheman.com/" title="topheman - le blog"><span class="icon"></span><span class="desc">Blog</span></a></li>
+            </ul>
+        </header>
+        <div id="main">
+            <% if(data.projects && data.projects.length > 0) {
+                for(var i=0; i<data.projects.length; i++) { 
+                    $project = data.projects[i] %>
+            <% include partials/index.projects.ejs %>
+            <%  }
+            } %>
+            <h1>Experiments</h1>
+            <% if(data.experiments && data.experiments.length > 0) {
+                for(var i=0; i<data.experiments.length; i++) { 
+                    $project = data.experiments[i] %>
+            <% include partials/index.projects.ejs %>
+            <%  }
+            } %>
+            <h1>Utilities</h1>
+            
+            <% if(data.utilities && data.utilities.length > 0) { %>
+            <ul class="utilities">
+                <% for(var i=0; i<data.utilities.length; i++){
+                    $utility = data.utilities[i] %>
+                <li>
+                    <strong><%= $utility.title %></strong> : <%= $utility.description %>
+                    <% if($utility.links && $utility.links.length) { %><br>
+                        <% for(var j=0; j<$utility.links.length; j++) { %>
+                        <% if (j > 0) { %> - <% } %>
+                        <a href="<%= $utility.links[j].href %>" title="<%= $utility.links[j].title %>"><%= $utility.links[j].label %></a>
+                        <% } %>
+                    <% } %>
+                </li>
+                <% } %>
+            </ul>
+            <% } %>
+            
+        </div>
+        <footer id="footer">
+            <p>© 2013 <a href="http://labs.topheman.com">labs.topheman.com</a> - Christophe Rosset</p>
+        </footer>
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-868601-6']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
     </body>
 </html>
