@@ -120,6 +120,30 @@
         ],
         "experiments" : [
             {
+                "title" : "Topheman Playground",
+                "tags" : [
+                    "EXPERIMENT"
+                ],
+                "caption" : {
+                    "img" : "captions/playground.png",
+                    "link" : "http://topheman-playground.herokuapp.com/",
+                    "title" : "Test Topheman Playground"
+                },
+                "description" : "Take control of a bouncing ball on your desktop screen, tilting your phone as you would, like a Wiimote",
+                "links" : [
+                    {
+                        "label" : "test",
+                        "href" : "http://topheman-playground.herokuapp.com/",
+                        "title" : "Test Topheman Playground"
+                    },
+                    {
+                        "label" : "github",
+                        "href" : "https://github.com/topheman/playground2",
+                        "title" : "Topheman Playground on github"
+                    }
+                ]
+            },
+            {
                 "title" : "Smiley Faces",
                 "tags" : [
                     "DEMO GAME"
