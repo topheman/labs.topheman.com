@@ -116,6 +116,30 @@
                         "title" : "About Topheman Squares on my blog"
                     }
                 ]
+            },
+            {
+                "title" : "Parallax.js - now with headtracking support",
+                "tags" : [
+                    "WEBRTC"
+                ],
+                "caption" : {
+                    "img" : "captions/parallax.js.png",
+                    "link" : "http://topheman.github.io/parallax/",
+                    "title" : "Test Parallax.js"
+                },
+                "description" : "Added headtracking support to the original project, which is a parallax engine that reacts to device orientation and cursor.",
+                "links" : [
+                    {
+                        "label" : "test",
+                        "href" : "http://topheman.github.io/parallax/",
+                        "title" : "Test Parallax.js"
+                    },
+                    {
+                        "label" : "github",
+                        "href" : "https://github.com/topheman/parallax",
+                        "title" : "Topheman Squares on github"
+                    }
+                ]
             }
         ],
         "experiments" : [
