@@ -1,7 +1,13 @@
 LABS.TOPHEMAN.COM
 =================
 
-This is no more than the repo of [labs.topheman.com](http://labs.topheman.com/), the site where I keep a list of some of the personal side projects I'm on.
+This was the repo of [labs.topheman.com](http://labs.topheman.com/), now I made a 301 redirection from the root of the site to a page of my blog that presents my personal projects.
+
+So I used this project to generate this page of my blog.
+
+What's left below is for me when I'll go back ...
+
+---
 
 ### Why would you care about the sources of such a website ?
 
