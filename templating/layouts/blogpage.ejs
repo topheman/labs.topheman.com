@@ -1,0 +1,31 @@
+<% if(data.projects && data.projects.length > 0) {
+    for(var i=0; i<data.projects.length; i++) { 
+        $project = data.projects[i] %>
+<% include partials/index.projects.ejs %>
+<%  }
+} %>
+<h1>Experiments</h1>
+<% if(data.experiments && data.experiments.length > 0) {
+    for(var i=0; i<data.experiments.length; i++) { 
+        $project = data.experiments[i] %>
+<% include partials/index.projects.ejs %>
+<%  }
+} %>
+<h1>Utilities</h1>
+
+<% if(data.utilities && data.utilities.length > 0) { %>
+<ul class="utilities">
+    <% for(var i=0; i<data.utilities.length; i++){
+        $utility = data.utilities[i] %>
+    <li>
+        <strong><%= $utility.title %></strong> : <%= $utility.description %>
+        <% if($utility.links && $utility.links.length) { %><br>
+            <% for(var j=0; j<$utility.links.length; j++) { %>
+            <% if (j > 0) { %> - <% } %>
+            <a href="<%= $utility.links[j].href %>" title="<%= $utility.links[j].title %>"><%= $utility.links[j].label %></a>
+            <% } %>
+        <% } %>
+    </li>
+    <% } %>
+</ul>
+<% } %>

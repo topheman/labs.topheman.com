@@ -1,0 +1,2 @@
+redirect 301 ./ http://dev.topheman.com/my-projects/
+redirect 301 ./index.html http://dev.topheman.com/my-projects/
